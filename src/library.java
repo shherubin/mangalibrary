@@ -14,18 +14,18 @@ public class library {
         List<book> customerCheckedBooks = new ArrayList<>();
 
         while(dashboard) {
-        System.out.println("Welcome to Miyamoto's Manga library, we have all the best manga to rent. \n " +
-                "Please select an option \n" +
-                 "1. Take a book. \n " +
-                 "2. Return a book. \n" +
-                 "3. Add a book cover. \n" +
-                 "4. See your cart. \n" +
-                 "5. Checkout.");
+            System.out.println("Welcome to Miyamoto's Manga library, we have all the best manga to rent. \n " +
+                    "Please select an option \n" +
+                     "1. Take a book. \n " +
+                     "2. Return a book. \n" +
+                     "3. Add a book cover. \n" +
+                     "4. See your cart. \n" +
+                     "5. Checkout.");
 
-        userChoice = stdin.nextLine();
-        switch(userChoice) {
-            case "1", "take a book" -> customerCheckedBooks.add((book)runShelfInventory(stdin));
-            case "2", "return a book" ->
+            userChoice = stdin.nextLine();
+            switch(userChoice) {
+                case "1", "take a book" -> customerCheckedBooks.add((book)runShelfInventory(stdin));
+                case "2", "return a book" ->
             }
         }
     }
