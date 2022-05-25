@@ -2,10 +2,10 @@ import java.nio.file.attribute.AttributeView;
 
 public class Book {
 
-    //Should these be camel case??
+        //Should these be camel case??
     private String Title;
     private String Author;
-    private boolean Availability;
+    private static boolean Availability;
     private int BookID;
 
 
@@ -26,8 +26,9 @@ public class Book {
     public boolean getAvailability() {
         return Availability;
     }
-    public boolean setAvailability(boolean updateFlag) {
-        this.Availability = updateFlag;
+    public static boolean  setAvailability(boolean updateFlag) {
+        Availability = updateFlag;
+        return updateFlag;
     }
 
     public int getbookID() {
