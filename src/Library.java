@@ -43,8 +43,9 @@ public class Library {
                 }
             }
         }
-    private static Book updateBook(Book book, boolean updateFlag){
-        book.setAvailability(updateFlag)
+    private Book updateBook(Book book, boolean updateFlag){
+        //non static method 'setAvailability' cannot be reference from a static context? what does that mean and how do I fix it
+        Book.setAvailability(updateFlag);
                 return book;
     }
     private static void printBookshelf(List<Book> bookShelf) {
@@ -55,7 +56,7 @@ public class Library {
 
     private static String bookSelection (Scanner stdin) {
         String input = "";
-        System.out.println("Select from the following. \n 1.Select a book \n 2.Return a book");
+        System.out.println("Select from the following. Enter the number below \n 1.Select a book \n 2.Return a book");
         input = stdin.nextLine();
         if (input.equals("1")) {
             System.out.println("Enter the book ID to take it from the shelf.");
@@ -72,3 +73,5 @@ public class Library {
 
     }
 }
+
+

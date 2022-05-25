@@ -1,27 +1,51 @@
+import java.nio.file.attribute.AttributeView;
+
 public class Book {
-    private String title;
+
+    //Should these be camel case??
+    private String Title;
+    private String Author;
+    private boolean Availability;
+    private int BookID;
+
+
+    public String getTitle() {
+        return Title;
+    }
+    public void setTitle(String title) {
+        this.Title = title;
+    }
 
     public String getAuthor() {
-        return author;
+        return Author;
     }
-
     public void setAuthor(String author) {
-        this.author = author;
+        this.Author = author;
     }
 
-    private String author;
-    private boolean availablity;
-    private int bookID;
+    public boolean getAvailability() {
+        return Availability;
+    }
+    public boolean setAvailability(boolean updateFlag) {
+        this.Availability = updateFlag;
+    }
 
+    public int getbookID() {
+        return BookID;
+    }
+
+    public void setbookID(int bookID) {
+        this.BookID = bookID;
+    }
     public Book(String title, String author, boolean availability, int bookID) {
-        this.title = title;
-        this.author = author;
-        this.availablity = availability;
-        this.bookID = bookID;
+        this.Title = title;
+        this.Author = author;
+        this.Availability = availability;
+        this.BookID = bookID;
     }
     @Override
     public String toString() {
-        return title + "written by " + author + ", this book is " + availablity + "and has ID#" + bookID;
+        return Title + "written by " + Author + ", this book is " + Availability + "and has ID#" + BookID;
     }
 
 }
