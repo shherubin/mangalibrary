@@ -1,52 +1,49 @@
-import java.nio.file.attribute.AttributeView;
-
 public class Book {
 
-        //Should these be camel case??
-    private String Title;
-    private String Author;
-    private static boolean Availability;
-    private int BookID;
+
+    private String title;
+    private String author;
+    private boolean availability;
+    private int bookId;
 
 
     public String getTitle() {
-        return Title;
+        return title;
     }
     public void setTitle(String title) {
-        this.Title = title;
+        this.title = title;
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
     public void setAuthor(String author) {
-        this.Author = author;
+        this.author = author;
     }
 
     public boolean getAvailability() {
-        return Availability;
+        return availability;
     }
-    public static boolean  setAvailability(boolean updateFlag) {
-        Availability = updateFlag;
-        return updateFlag;
-    }
-
-    public int getbookID() {
-        return BookID;
+    public void setAvailability(boolean availability) {
+        this.availability = availability;
     }
 
-    public void setbookID(int bookID) {
-        this.BookID = bookID;
+    public int getBookId() {
+        return bookId;
     }
-    public Book(String title, String author, boolean availability, int bookID) {
-        this.Title = title;
-        this.Author = author;
-        this.Availability = availability;
-        this.BookID = bookID;
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
+    }
+
+    public Book(String title, String author, boolean availability, int bookId) {
+        this.title = title;
+        this.author = author;
+        this.availability = availability;
+        this.bookId = bookId;
     }
     @Override
     public String toString() {
-        return Title + "written by " + Author + ", this book is " + Availability + "and has ID#" + BookID;
+        return title + " written by " + author + ", this book's availability is " + availability + " and has ID #" + bookId;
     }
 
 }
