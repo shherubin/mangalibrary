@@ -45,7 +45,7 @@ public class Library {
                 case "1", "see the library" -> printBookshelf(bookShelf);
                 case "2", "take/return a book", "take", "return" -> customerCheckedBooks.add(bookSelection(bookShelf))  ;
                 case "3", "see my books" ->  printBookshelf(customerCheckedBooks);
-                case "4", "checkout" -> checkout(customerCheckedBooks, Book(setAvailability));
+                case "4", "checkout" -> checkout(customerCheckedBooks, (Book) Book);
                 case "5", "exit" -> System.out.println("Have a good day.");
                 default -> System.out.println("Please select a viable option or type exit to leave.");
                 }
@@ -62,15 +62,15 @@ public class Library {
         return bookShelf.get(0);
 
     }
-    //in the following I need to pass my customer's books in as well as change their availability. Do I pass the Book book thru or just setavailability
+    // what is the 2nd parameter suppose to be? Is it the object's characteristic?
     private static Book checkout(List<Book> customerCheckedBooks, Book bookAvailability) {
         System.out.println("Your basket contains the following \n" + customerCheckedBooks);
         bookAvailability.setAvailability(true);
         for (int i = 0; i < customerCheckedBooks.size(); i++) {
             bookAvailability.setAvailability(true);
-
-            return ;
+        //idk or understand if this is right
         }
+        return (Book) Book;
     }
 }
 
