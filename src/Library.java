@@ -15,6 +15,9 @@ public class Library {
         List<Book> customerCheckedBooks = new ArrayList<>();
         List<Book> bookShelf = new ArrayList();
 
+        /**
+         * These are the individual books you have created
+         */
         Book onePiece = new Book("One Piece", "Eiichiro Oda", true, 1);
         Book narutoShippuden = new Book("Naruto Shippuden", "Masashi Kishimoto", true, 2);
         Book inuyasha = new Book("Inuyasha", "Rumiko Takahashi", true, 3);
@@ -22,6 +25,9 @@ public class Library {
         Book yuYuHakusho = new Book("Yu Yu Hakusho", "Yoshihiro Togashi", true, 5);
 
 
+        /**
+         * You add the books from above into an ArrayList here
+         */
         bookShelf.add(onePiece);
         bookShelf.add(narutoShippuden);
         bookShelf.add(inuyasha);
@@ -45,7 +51,7 @@ public class Library {
                 case "1", "see the library" -> printBookshelf(bookShelf);
                 case "2", "take/return a book", "take", "return" -> customerCheckedBooks.add(bookSelection(bookShelf))  ;
                 case "3", "see my books" ->  printBookshelf(customerCheckedBooks);
-                case "4", "checkout" -> checkout(customerCheckedBooks, (Book) Book);
+                case "4", "checkout" -> checkout(customerCheckedBooks, (Book) Book); //you're currently using checkout here so think about what book is going to get passed
                 case "5", "exit" -> System.out.println("Have a good day.");
                 default -> System.out.println("Please select a viable option or type exit to leave.");
                 }
@@ -62,7 +68,14 @@ public class Library {
         return bookShelf.get(0);
 
     }
-    // what is the 2nd parameter suppose to be? Is it the object's characteristic?
+
+    /**
+     * This method CURRENTLY takes in the customer's book, and the book that they can check out (which means the book
+     * you're going to change the Book Object property availability from true to false)
+     * @param customerCheckedBooks
+     * @param bookAvailability
+     * @return
+     */
     private static Book checkout(List<Book> customerCheckedBooks, Book bookAvailability) {
         System.out.println("Your basket contains the following \n" + customerCheckedBooks);
         bookAvailability.setAvailability(true);
