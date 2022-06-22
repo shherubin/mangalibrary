@@ -71,17 +71,18 @@ public class Library {
 
     /**
      * This method CURRENTLY takes in the customer's book, and the book that they can check out (which means the book
-     * you're going to change the Book Object property availability from true to false)
+     * you're going to change the Book Object (which is your Book.java file) property availability from true to false)
      * @param customerCheckedBooks
-     * @param bookAvailability
+     * @param bookToCheckout
      * @return
      */
-    private static Book checkout(List<Book> customerCheckedBooks, Book bookAvailability) {
+    private static Book checkout(List<Book> customerCheckedBooks, Book bookToCheckout) {
         System.out.println("Your basket contains the following \n" + customerCheckedBooks);
-        bookAvailability.setAvailability(true);
+        bookToCheckout.setAvailability(true);
         for (int i = 0; i < customerCheckedBooks.size(); i++) {
-            bookAvailability.setAvailability(true);
-        //idk or understand if this is right
+            bookToCheckout.setAvailability(true);
+            //idk or understand if this is right
+            // This is currently going through the customer's list of books and changing the availability to true.
         }
         return (Book) Book;
     }
