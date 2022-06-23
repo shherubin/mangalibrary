@@ -6,6 +6,14 @@ public class Book {
     private boolean availability;
     private int bookId;
 
+    public Book(){}
+
+    public Book(String title, String author, boolean availability, int bookId) {
+        this.title = title;
+        this.author = author;
+        this.availability = availability;
+        this.bookId = bookId;
+    }
 
     public String getTitle() {
         return title;
@@ -35,12 +43,7 @@ public class Book {
         this.bookId = bookId;
     }
 
-    public Book(String title, String author, boolean availability, int bookId) {
-        this.title = title;
-        this.author = author;
-        this.availability = availability;
-        this.bookId = bookId;
-    }
+
     @Override
     public String toString() {
         return title + " written by " + author + ", this book's availability is " + availability + " and has ID #" + bookId;
